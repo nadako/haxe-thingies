@@ -12,6 +12,14 @@ for (key in d.keys())
     trace(d[key]);
 ```
 
+is equivalent to
+
+```haxe
+for (key in Reflect.fields(d))
+    trace((Reflect.field(d, key) : Int));
+```
+
+
 ## OptionalField
 
 This type provides explicit, but convenient syntax for working with optional and potentially missing structure fields, wrapping `Reflect.hasField` calls.
@@ -19,6 +27,12 @@ This type provides explicit, but convenient syntax for working with optional and
 ```haxe
 var house:{?tennant:OptionalField<String>} = {};
 var tennant = house.tennant.or("Ghosts");
+```
+
+is equvalent to
+
+```haxe
+var tennant = Reflect.hasField(house, "tennant") ? house.tennant : "Ghosts";
 ```
 
 ## Yet to add
