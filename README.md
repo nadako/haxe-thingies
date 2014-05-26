@@ -9,3 +9,9 @@ This type wraps `Reflect` field access for dynamic structures in a `Map`-like in
 ## OptionalField
 
 This type provides explicit, but convenient syntax for working with optional and potentially missing structure fields, wrapping `Reflect.hasField` calls.
+
+
+## Yet to add
+ * Const (https://gist.github.com/nadako/8999329)
+ * CommandMacro (thing that generates runtime checks for command arguments type)
+ * Type validator + JSON parser using haxe (http://nadako.tumblr.com/post/77106860013/using-haxe-macros-as-syntax-tolerant-position-aware)
