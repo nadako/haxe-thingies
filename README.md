@@ -6,10 +6,20 @@ This repo contains several useful little types and macros for Haxe that may or m
 
 This type wraps `Reflect` field access for dynamic structures in a `Map`-like interface, making it easier to work with JSON or external JavaScript objects.
 
+```haxe
+var d:DynamicObject<Int> = haxe.Json.parse('{"item1": 1, "item2": 2}');
+for (key in d.keys())
+    trace(d[key]);
+```
+
 ## OptionalField
 
 This type provides explicit, but convenient syntax for working with optional and potentially missing structure fields, wrapping `Reflect.hasField` calls.
 
+```haxe
+var house:{?tennant:OptionalField<String>} = {};
+var tennant = house.tennant.or("Ghosts");
+```
 
 ## Yet to add
  * Const (https://gist.github.com/nadako/8999329)
