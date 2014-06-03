@@ -37,5 +37,6 @@ var tennant = Reflect.hasField(house, "tennant") ? house.tennant : "Ghosts";
 
 ## Yet to add
  * Const (https://gist.github.com/nadako/9200026)
+ * CoffeeScrpt-like destructuring (https://gist.github.com/nadako/278da78c33369a2827a8)
  * CommandMacro (https://gist.github.com/nadako/7fd2372342d814ceabd5)
  * Type validator + JSON parser using haxe (http://nadako.tumblr.com/post/77106860013/using-haxe-macros-as-syntax-tolerant-position-aware)
