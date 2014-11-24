@@ -6,6 +6,8 @@ This repo contains several useful little types and macros for Haxe that may or m
 
 This type wraps `Reflect` field access for dynamic structures in a `Map`-like interface, making it easier to work with JSON or external JavaScript objects.
 
+> NOTE: this abstract is now part of Haxe standard library (since 3.2.0), see https://github.com/HaxeFoundation/haxe/blob/development/std/haxe/DynamicAccess.hx
+
 ```haxe
 var d:DynamicObject<Int> = haxe.Json.parse('{"item1": 1, "item2": 2}');
 for (key in d.keys())
