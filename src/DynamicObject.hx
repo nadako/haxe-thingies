@@ -31,7 +31,7 @@ abstract DynamicObject<T>(Dynamic<T>) from Dynamic<T> {
         If `key` is null, the result is unspecified.
     **/
     @:arrayAccess
-    public inline function set(key:String, value:T) Reflect.setField(this, key, value);
+    public inline function set(key:String, value:T):T { Reflect.setField(this, key, value); return value; }
 
     /**
         Tells if the structure contains a specified `key`.
